@@ -1,0 +1,982 @@
+
+/tmp/arduino_build_321817/wheatley_code.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+   0:	1d c0       	rjmp	.+58     	; 0x3c <__ctors_end>
+   2:	37 c0       	rjmp	.+110    	; 0x72 <__bad_interrupt>
+   4:	36 c0       	rjmp	.+108    	; 0x72 <__bad_interrupt>
+   6:	05 c1       	rjmp	.+522    	; 0x212 <__vector_3>
+   8:	34 c0       	rjmp	.+104    	; 0x72 <__bad_interrupt>
+   a:	ae c0       	rjmp	.+348    	; 0x168 <__vector_5>
+   c:	32 c0       	rjmp	.+100    	; 0x72 <__bad_interrupt>
+   e:	31 c0       	rjmp	.+98     	; 0x72 <__bad_interrupt>
+  10:	30 c0       	rjmp	.+96     	; 0x72 <__bad_interrupt>
+  12:	f4 c0       	rjmp	.+488    	; 0x1fc <__vector_9>
+  14:	2e c0       	rjmp	.+92     	; 0x72 <__bad_interrupt>
+  16:	2d c0       	rjmp	.+90     	; 0x72 <__bad_interrupt>
+  18:	31 c1       	rjmp	.+610    	; 0x27c <__vector_12>
+  1a:	2b c0       	rjmp	.+86     	; 0x72 <__bad_interrupt>
+  1c:	2a c0       	rjmp	.+84     	; 0x72 <__bad_interrupt>
+
+0000001e <__trampolines_end>:
+__trampolines_start():
+  1e:	00 00       	nop
+  20:	00 00       	nop
+  22:	37 00       	.word	0x0037	; ????
+
+00000024 <port_to_output_PGM>:
+  24:	00 00 00 00 38 00                                   ....8.
+
+0000002a <digital_pin_to_port_PGM>:
+  2a:	02 02 02 02 02 02                                   ......
+
+00000030 <digital_pin_to_bit_mask_PGM>:
+  30:	01 02 04 08 10 20                                   ..... 
+
+00000036 <digital_pin_to_timer_PGM>:
+  36:	01 02 00 00 04 00                                   ......
+
+0000003c <__ctors_end>:
+__dtors_end():
+  3c:	11 24       	eor	r1, r1
+  3e:	1f be       	out	0x3f, r1	; 63
+  40:	cf e5       	ldi	r28, 0x5F	; 95
+  42:	d2 e0       	ldi	r29, 0x02	; 2
+  44:	de bf       	out	0x3e, r29	; 62
+  46:	cd bf       	out	0x3d, r28	; 61
+
+00000048 <__do_copy_data>:
+__do_copy_data():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2409
+  48:	10 e0       	ldi	r17, 0x00	; 0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2410
+  4a:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2411
+  4c:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2412
+  4e:	e0 ec       	ldi	r30, 0xC0	; 192
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2413
+  50:	f3 e0       	ldi	r31, 0x03	; 3
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2414
+  52:	02 c0       	rjmp	.+4      	; 0x58 <__do_copy_data+0x10>
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2417
+  54:	05 90       	lpm	r0, Z+
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2422
+  56:	0d 92       	st	X+, r0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2424
+  58:	a2 36       	cpi	r26, 0x62	; 98
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2425
+  5a:	b1 07       	cpc	r27, r17
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2426
+  5c:	d9 f7       	brne	.-10     	; 0x54 <__do_copy_data+0xc>
+
+0000005e <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+  5e:	20 e0       	ldi	r18, 0x00	; 0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+  60:	a2 e6       	ldi	r26, 0x62	; 98
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+  62:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+  64:	01 c0       	rjmp	.+2      	; 0x68 <.do_clear_bss_start>
+
+00000066 <.do_clear_bss_loop>:
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+  66:	1d 92       	st	X+, r1
+
+00000068 <.do_clear_bss_start>:
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+  68:	aa 37       	cpi	r26, 0x7A	; 122
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+  6a:	b2 07       	cpc	r27, r18
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+  6c:	e1 f7       	brne	.-8      	; 0x66 <.do_clear_bss_loop>
+.do_clear_bss_start():
+  6e:	2d d1       	rcall	.+602    	; 0x2ca <main>
+  70:	a5 c1       	rjmp	.+842    	; 0x3bc <_exit>
+
+00000072 <__bad_interrupt>:
+__vector_1():
+  72:	c6 cf       	rjmp	.-116    	; 0x0 <__vectors>
+
+00000074 <digitalWrite.constprop.3>:
+digitalWrite.constprop.3():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:139
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+  if (pin&128) {pin=analogInputToDigitalPin((pin&127));}
+  uint8_t timer = digitalPinToTimer(pin);
+  74:	90 e0       	ldi	r25, 0x00	; 0
+  76:	fc 01       	movw	r30, r24
+  78:	ea 5c       	subi	r30, 0xCA	; 202
+  7a:	ff 4f       	sbci	r31, 0xFF	; 255
+  7c:	24 91       	lpm	r18, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:140
+  uint8_t bit = digitalPinToBitMask(pin);
+  7e:	fc 01       	movw	r30, r24
+  80:	e0 5d       	subi	r30, 0xD0	; 208
+  82:	ff 4f       	sbci	r31, 0xFF	; 255
+  84:	34 91       	lpm	r19, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:141
+  uint8_t port = digitalPinToPort(pin);
+  86:	fc 01       	movw	r30, r24
+  88:	e6 5d       	subi	r30, 0xD6	; 214
+  8a:	ff 4f       	sbci	r31, 0xFF	; 255
+  8c:	e4 91       	lpm	r30, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:144
+  volatile uint8_t *out;
+
+  if (port == NOT_A_PIN) return;
+  8e:	ee 23       	and	r30, r30
+  90:	a1 f0       	breq	.+40     	; 0xba <digitalWrite.constprop.3+0x46>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:148
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+  92:	22 23       	and	r18, r18
+  94:	29 f0       	breq	.+10     	; 0xa0 <digitalWrite.constprop.3+0x2c>
+turnOffPWM():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:67
+}
+
+static void turnOffPWM(uint8_t timer)
+{
+  #if defined(TCCR0A) && defined(COM0A1)
+  if( timer == TIMER0A){
+  96:	21 30       	cpi	r18, 0x01	; 1
+  98:	89 f4       	brne	.+34     	; 0xbc <digitalWrite.constprop.3+0x48>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:68
+    cbi(TCCR0A, COM0A1);
+  9a:	8a b5       	in	r24, 0x2a	; 42
+  9c:	8f 77       	andi	r24, 0x7F	; 127
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:75
+  } else
+  #endif
+
+  #if defined(TCCR0A) && defined(COM0B1)
+  if( timer == TIMER0B){
+    cbi(TCCR0A, COM0B1);
+  9e:	8a bd       	out	0x2a, r24	; 42
+digitalWrite.constprop.3():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:150
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+  out = portOutputRegister(port);
+  a0:	f0 e0       	ldi	r31, 0x00	; 0
+  a2:	ee 0f       	add	r30, r30
+  a4:	ff 1f       	adc	r31, r31
+  a6:	ec 5d       	subi	r30, 0xDC	; 220
+  a8:	ff 4f       	sbci	r31, 0xFF	; 255
+  aa:	a5 91       	lpm	r26, Z+
+  ac:	b4 91       	lpm	r27, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:158
+    uint8_t oldSREG = SREG;
+    cli();
+    *out &= ~bit;
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+  ae:	8f b7       	in	r24, 0x3f	; 63
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:159
+    cli();
+  b0:	f8 94       	cli
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:160
+    *out |= bit;
+  b2:	ec 91       	ld	r30, X
+  b4:	e3 2b       	or	r30, r19
+  b6:	ec 93       	st	X, r30
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:161
+    SREG = oldSREG;
+  b8:	8f bf       	out	0x3f, r24	; 63
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:163
+  }
+}
+  ba:	08 95       	ret
+turnOffPWM():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:74
+    //cbi(TCCR0A, COM0A0);
+  } else
+  #endif
+
+  #if defined(TCCR0A) && defined(COM0B1)
+  if( timer == TIMER0B){
+  bc:	22 30       	cpi	r18, 0x02	; 2
+  be:	19 f4       	brne	.+6      	; 0xc6 <digitalWrite.constprop.3+0x52>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:75
+    cbi(TCCR0A, COM0B1);
+  c0:	8a b5       	in	r24, 0x2a	; 42
+  c2:	8f 7d       	andi	r24, 0xDF	; 223
+  c4:	ec cf       	rjmp	.-40     	; 0x9e <digitalWrite.constprop.3+0x2a>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:105
+    cbi(TCCR1C,COM1D0);
+    //cbi(TCCR1A,PWM1D);
+  } else
+    #endif
+  #if defined(TCCR1) && defined(COM1A1)
+  if(timer == TIMER1A){
+  c6:	23 30       	cpi	r18, 0x03	; 3
+  c8:	21 f4       	brne	.+8      	; 0xd2 <digitalWrite.constprop.3+0x5e>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:106
+    cbi(TCCR1, COM1A1);
+  ca:	80 b7       	in	r24, 0x30	; 48
+  cc:	8f 7d       	andi	r24, 0xDF	; 223
+  ce:	80 bf       	out	0x30, r24	; 48
+  d0:	e7 cf       	rjmp	.-50     	; 0xa0 <digitalWrite.constprop.3+0x2c>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:125
+  #endif
+  } else
+  #endif
+
+  #if defined(TCCR1) && defined(COM1B1)
+  if( timer == TIMER1B){
+  d2:	24 30       	cpi	r18, 0x04	; 4
+  d4:	29 f7       	brne	.-54     	; 0xa0 <digitalWrite.constprop.3+0x2c>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:126
+    cbi(GTCCR, COM1B1);
+  d6:	8c b5       	in	r24, 0x2c	; 44
+  d8:	8f 7d       	andi	r24, 0xDF	; 223
+  da:	8c bd       	out	0x2c, r24	; 44
+  dc:	e1 cf       	rjmp	.-62     	; 0xa0 <digitalWrite.constprop.3+0x2c>
+
+000000de <pinMode.constprop.0>:
+pinMode.constprop.0():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:35
+#include "pins_arduino.h"
+
+void pinMode(uint8_t pin, uint8_t mode)
+{
+  if (pin&128) {pin=analogInputToDigitalPin((pin&127));}
+  uint8_t bit = digitalPinToBitMask(pin);
+  de:	90 e0       	ldi	r25, 0x00	; 0
+  e0:	fc 01       	movw	r30, r24
+  e2:	e0 5d       	subi	r30, 0xD0	; 208
+  e4:	ff 4f       	sbci	r31, 0xFF	; 255
+  e6:	24 91       	lpm	r18, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:36
+  uint8_t port = digitalPinToPort(pin);
+  e8:	86 5d       	subi	r24, 0xD6	; 214
+  ea:	9f 4f       	sbci	r25, 0xFF	; 255
+  ec:	fc 01       	movw	r30, r24
+  ee:	84 91       	lpm	r24, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:39
+  volatile uint8_t *reg, *out;
+
+  if (port == NOT_A_PIN) return;
+  f0:	88 23       	and	r24, r24
+  f2:	99 f0       	breq	.+38     	; 0x11a <pinMode.constprop.0+0x3c>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:41
+
+  reg = portModeRegister(port);
+  f4:	90 e0       	ldi	r25, 0x00	; 0
+  f6:	88 0f       	add	r24, r24
+  f8:	99 1f       	adc	r25, r25
+  fa:	fc 01       	movw	r30, r24
+  fc:	e2 5e       	subi	r30, 0xE2	; 226
+  fe:	ff 4f       	sbci	r31, 0xFF	; 255
+ 100:	a5 91       	lpm	r26, Z+
+ 102:	b4 91       	lpm	r27, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:42
+  out = portOutputRegister(port);
+ 104:	fc 01       	movw	r30, r24
+ 106:	ec 5d       	subi	r30, 0xDC	; 220
+ 108:	ff 4f       	sbci	r31, 0xFF	; 255
+ 10a:	85 91       	lpm	r24, Z+
+ 10c:	94 91       	lpm	r25, Z
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:57
+                cli();
+    *reg &= ~bit;
+    *out |= bit;
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+ 10e:	8f b7       	in	r24, 0x3f	; 63
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:58
+                cli();
+ 110:	f8 94       	cli
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:59
+    *reg |= bit;
+ 112:	ec 91       	ld	r30, X
+ 114:	e2 2b       	or	r30, r18
+ 116:	ec 93       	st	X, r30
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:60
+    SREG = oldSREG;
+ 118:	8f bf       	out	0x3f, r24	; 63
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring_digital.c:62
+  }
+}
+ 11a:	08 95       	ret
+
+0000011c <micros>:
+micros():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:190
+}
+
+unsigned long micros()
+{
+  unsigned long m;
+  uint8_t oldSREG = SREG, t;
+ 11c:	3f b7       	in	r19, 0x3f	; 63
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:192
+
+  cli();
+ 11e:	f8 94       	cli
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:193
+  m = millis_timer_overflow_count;
+ 120:	80 91 76 00 	lds	r24, 0x0076	; 0x800076 <millis_timer_overflow_count>
+ 124:	90 91 77 00 	lds	r25, 0x0077	; 0x800077 <millis_timer_overflow_count+0x1>
+ 128:	a0 91 78 00 	lds	r26, 0x0078	; 0x800078 <millis_timer_overflow_count+0x2>
+ 12c:	b0 91 79 00 	lds	r27, 0x0079	; 0x800079 <millis_timer_overflow_count+0x3>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:195
+#if defined(TCNT0) && (TIMER_TO_USE_FOR_MILLIS == 0) && !defined(TCW0)
+  t = TCNT0;
+ 130:	22 b7       	in	r18, 0x32	; 50
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:210
+
+#if defined(TIFR0) && (TIMER_TO_USE_FOR_MILLIS == 0)
+  if ((TIFR0 & _BV(TOV0)) && (t < 255))
+    m++;
+#elif defined(TIFR) && (TIMER_TO_USE_FOR_MILLIS == 0)
+  if ((TIFR & _BV(TOV0)) && (t < 255))
+ 132:	08 b6       	in	r0, 0x38	; 56
+ 134:	01 fe       	sbrs	r0, 1
+ 136:	05 c0       	rjmp	.+10     	; 0x142 <micros+0x26>
+ 138:	2f 3f       	cpi	r18, 0xFF	; 255
+ 13a:	19 f0       	breq	.+6      	; 0x142 <micros+0x26>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:211
+    m++;
+ 13c:	01 96       	adiw	r24, 0x01	; 1
+ 13e:	a1 1d       	adc	r26, r1
+ 140:	b1 1d       	adc	r27, r1
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:220
+#elif defined(TIFR) && (TIMER_TO_USE_FOR_MILLIS == 1)
+  if ((TIFR & _BV(TOV1)) && (t < 255))
+    m++;
+#endif
+
+  SREG = oldSREG;
+ 142:	3f bf       	out	0x3f, r19	; 63
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:227
+
+#if F_CPU < 1000000L
+  return ((m << 8) + t) * MillisTimer_Prescale_Value * (1000000L/F_CPU);
+#else
+#if (MillisTimer_Prescale_Value % clockCyclesPerMicrosecond() == 0 ) // Can we just do it the naive way? If so great!
+  return ((m << 8) + t) * (MillisTimer_Prescale_Value / clockCyclesPerMicrosecond());
+ 144:	ba 2f       	mov	r27, r26
+ 146:	a9 2f       	mov	r26, r25
+ 148:	98 2f       	mov	r25, r24
+ 14a:	88 27       	eor	r24, r24
+ 14c:	bc 01       	movw	r22, r24
+ 14e:	cd 01       	movw	r24, r26
+ 150:	62 0f       	add	r22, r18
+ 152:	71 1d       	adc	r23, r1
+ 154:	81 1d       	adc	r24, r1
+ 156:	91 1d       	adc	r25, r1
+ 158:	43 e0       	ldi	r20, 0x03	; 3
+ 15a:	66 0f       	add	r22, r22
+ 15c:	77 1f       	adc	r23, r23
+ 15e:	88 1f       	adc	r24, r24
+ 160:	99 1f       	adc	r25, r25
+ 162:	4a 95       	dec	r20
+ 164:	d1 f7       	brne	.-12     	; 0x15a <micros+0x3e>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:270
+  //the high part gets divided by cCPuS then multiplied by the prescaler. Then take the low 8 bits plus the high part modulo-cCPuS to correct for the division, then multiply that by the prescaler value first before dividing by cCPuS, and finally add the two together.
+  //return ((m << 8 )/clockCyclesPerMicrosecond()* MillisTimer_Prescale_Value) + ((t+(((m<<8)%clockCyclesPerMicrosecond())) * MillisTimer_Prescale_Value / clockCyclesPerMicrosecond()));
+  return ((m << 8 )/clockCyclesPerMicrosecond()* MillisTimer_Prescale_Value) + (t * MillisTimer_Prescale_Value / clockCyclesPerMicrosecond());
+#endif
+#endif
+}
+ 166:	08 95       	ret
+
+00000168 <__vector_5>:
+__vector_5():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:133
+#else
+
+#error Millis() timer not defined!
+
+#endif
+{
+ 168:	1f 92       	push	r1
+ 16a:	0f 92       	push	r0
+ 16c:	0f b6       	in	r0, 0x3f	; 63
+ 16e:	0f 92       	push	r0
+ 170:	11 24       	eor	r1, r1
+ 172:	2f 93       	push	r18
+ 174:	3f 93       	push	r19
+ 176:	8f 93       	push	r24
+ 178:	9f 93       	push	r25
+ 17a:	af 93       	push	r26
+ 17c:	bf 93       	push	r27
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:136
+  // copy these to local variables so they can be stored in registers
+  // (volatile variables must be read from memory on every access)
+  unsigned long m = millis_timer_millis;
+ 17e:	80 91 72 00 	lds	r24, 0x0072	; 0x800072 <millis_timer_millis>
+ 182:	90 91 73 00 	lds	r25, 0x0073	; 0x800073 <millis_timer_millis+0x1>
+ 186:	a0 91 74 00 	lds	r26, 0x0074	; 0x800074 <millis_timer_millis+0x2>
+ 18a:	b0 91 75 00 	lds	r27, 0x0075	; 0x800075 <millis_timer_millis+0x3>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:137
+  unsigned char f = millis_timer_fract;
+ 18e:	30 91 71 00 	lds	r19, 0x0071	; 0x800071 <millis_timer_fract>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:149
+    f -= FRACT_MAX;
+    m += 1;
+  }
+...rmv */
+
+  f += FRACT_INC;
+ 192:	26 e0       	ldi	r18, 0x06	; 6
+ 194:	23 0f       	add	r18, r19
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:151
+
+  if (f >= FRACT_MAX)
+ 196:	2d 37       	cpi	r18, 0x7D	; 125
+ 198:	68 f1       	brcs	.+90     	; 0x1f4 <__vector_5+0x8c>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:153
+  {
+    f -= FRACT_MAX;
+ 19a:	29 e8       	ldi	r18, 0x89	; 137
+ 19c:	23 0f       	add	r18, r19
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:155
+  m += 1;
+    m += MILLIS_INC;
+ 19e:	03 96       	adiw	r24, 0x03	; 3
+ 1a0:	a1 1d       	adc	r26, r1
+ 1a2:	b1 1d       	adc	r27, r1
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:162
+  else
+  {
+    m += MILLIS_INC;
+  }
+
+  millis_timer_fract = f;
+ 1a4:	20 93 71 00 	sts	0x0071, r18	; 0x800071 <millis_timer_fract>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:163
+  millis_timer_millis = m;
+ 1a8:	80 93 72 00 	sts	0x0072, r24	; 0x800072 <millis_timer_millis>
+ 1ac:	90 93 73 00 	sts	0x0073, r25	; 0x800073 <millis_timer_millis+0x1>
+ 1b0:	a0 93 74 00 	sts	0x0074, r26	; 0x800074 <millis_timer_millis+0x2>
+ 1b4:	b0 93 75 00 	sts	0x0075, r27	; 0x800075 <millis_timer_millis+0x3>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:164
+  millis_timer_overflow_count++;
+ 1b8:	80 91 76 00 	lds	r24, 0x0076	; 0x800076 <millis_timer_overflow_count>
+ 1bc:	90 91 77 00 	lds	r25, 0x0077	; 0x800077 <millis_timer_overflow_count+0x1>
+ 1c0:	a0 91 78 00 	lds	r26, 0x0078	; 0x800078 <millis_timer_overflow_count+0x2>
+ 1c4:	b0 91 79 00 	lds	r27, 0x0079	; 0x800079 <millis_timer_overflow_count+0x3>
+ 1c8:	01 96       	adiw	r24, 0x01	; 1
+ 1ca:	a1 1d       	adc	r26, r1
+ 1cc:	b1 1d       	adc	r27, r1
+ 1ce:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <millis_timer_overflow_count>
+ 1d2:	90 93 77 00 	sts	0x0077, r25	; 0x800077 <millis_timer_overflow_count+0x1>
+ 1d6:	a0 93 78 00 	sts	0x0078, r26	; 0x800078 <millis_timer_overflow_count+0x2>
+ 1da:	b0 93 79 00 	sts	0x0079, r27	; 0x800079 <millis_timer_overflow_count+0x3>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:171
+
+//MICROSECONDS_PER_MILLIS_OVERFLOW=2048
+//MILLIS_INC=2
+//FRACT_INC=6
+//FRACT_MAX=125
+}
+ 1de:	bf 91       	pop	r27
+ 1e0:	af 91       	pop	r26
+ 1e2:	9f 91       	pop	r25
+ 1e4:	8f 91       	pop	r24
+ 1e6:	3f 91       	pop	r19
+ 1e8:	2f 91       	pop	r18
+ 1ea:	0f 90       	pop	r0
+ 1ec:	0f be       	out	0x3f, r0	; 63
+ 1ee:	0f 90       	pop	r0
+ 1f0:	1f 90       	pop	r1
+ 1f2:	18 95       	reti
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:159
+  m += 1;
+    m += MILLIS_INC;
+  }
+  else
+  {
+    m += MILLIS_INC;
+ 1f4:	02 96       	adiw	r24, 0x02	; 2
+ 1f6:	a1 1d       	adc	r26, r1
+ 1f8:	b1 1d       	adc	r27, r1
+ 1fa:	d4 cf       	rjmp	.-88     	; 0x1a4 <__vector_5+0x3c>
+
+000001fc <__vector_9>:
+__vector_9():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:38
+  if(pwm_len <= 100)pwm_len++;
+  else pwm_len=0;
+  if(pwm_len>=PWM_BLUE.end_point) PORTB &= ~_BV(BLUE);//if(pwm_len>=PWM_BLUE.end_point+PWM_BLUE.start_point && pwm_len<PWM_BLUE.start_point) PORTB &= ~_BV(BLUE);
+  else PORTB |= _BV(BLUE);
+}
+ISR(TIMER1_COMPB_vect){
+ 1fc:	1f 92       	push	r1
+ 1fe:	0f 92       	push	r0
+ 200:	0f b6       	in	r0, 0x3f	; 63
+ 202:	0f 92       	push	r0
+ 204:	11 24       	eor	r1, r1
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:39
+  PINB |= _BV(GREEN);
+ 206:	b0 9a       	sbi	0x16, 0	; 22
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:40
+}
+ 208:	0f 90       	pop	r0
+ 20a:	0f be       	out	0x3f, r0	; 63
+ 20c:	0f 90       	pop	r0
+ 20e:	1f 90       	pop	r1
+ 210:	18 95       	reti
+
+00000212 <__vector_3>:
+__vector_3():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:32
+  unit!=unit;
+  WDTCR |= 1<<WDIE; //Se setea el 6 bit de WDTCR para que la siguiente activacion del watchdog no sea un reset
+  digitalWrite(RED, HIGH);
+  
+}
+ISR(TIMER1_COMPA_vect){
+ 212:	1f 92       	push	r1
+ 214:	0f 92       	push	r0
+ 216:	0f b6       	in	r0, 0x3f	; 63
+ 218:	0f 92       	push	r0
+ 21a:	11 24       	eor	r1, r1
+ 21c:	2f 93       	push	r18
+ 21e:	3f 93       	push	r19
+ 220:	8f 93       	push	r24
+ 222:	9f 93       	push	r25
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:33
+  if(pwm_len <= 100)pwm_len++;
+ 224:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
+ 228:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__data_start+0x1>
+ 22c:	85 36       	cpi	r24, 0x65	; 101
+ 22e:	91 05       	cpc	r25, r1
+ 230:	f4 f4       	brge	.+60     	; 0x26e <__stack+0xf>
+ 232:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
+ 236:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__data_start+0x1>
+ 23a:	01 96       	adiw	r24, 0x01	; 1
+ 23c:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__data_start+0x1>
+ 240:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__data_start>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:35
+  else pwm_len=0;
+  if(pwm_len>=PWM_BLUE.end_point) PORTB &= ~_BV(BLUE);//if(pwm_len>=PWM_BLUE.end_point+PWM_BLUE.start_point && pwm_len<PWM_BLUE.start_point) PORTB &= ~_BV(BLUE);
+ 244:	20 91 6f 00 	lds	r18, 0x006F	; 0x80006f <PWM_BLUE+0x3>
+ 248:	30 91 70 00 	lds	r19, 0x0070	; 0x800070 <PWM_BLUE+0x4>
+ 24c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__data_start>
+ 250:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__data_start+0x1>
+ 254:	82 17       	cp	r24, r18
+ 256:	93 07       	cpc	r25, r19
+ 258:	78 f0       	brcs	.+30     	; 0x278 <__stack+0x19>
+ 25a:	c2 98       	cbi	0x18, 2	; 24
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:37
+  else PORTB |= _BV(BLUE);
+}
+ 25c:	9f 91       	pop	r25
+ 25e:	8f 91       	pop	r24
+ 260:	3f 91       	pop	r19
+ 262:	2f 91       	pop	r18
+ 264:	0f 90       	pop	r0
+ 266:	0f be       	out	0x3f, r0	; 63
+ 268:	0f 90       	pop	r0
+ 26a:	1f 90       	pop	r1
+ 26c:	18 95       	reti
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:34
+  digitalWrite(RED, HIGH);
+  
+}
+ISR(TIMER1_COMPA_vect){
+  if(pwm_len <= 100)pwm_len++;
+  else pwm_len=0;
+ 26e:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__data_start+0x1>
+ 272:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__data_start>
+ 276:	e6 cf       	rjmp	.-52     	; 0x244 <__vector_3+0x32>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:36
+  if(pwm_len>=PWM_BLUE.end_point) PORTB &= ~_BV(BLUE);//if(pwm_len>=PWM_BLUE.end_point+PWM_BLUE.start_point && pwm_len<PWM_BLUE.start_point) PORTB &= ~_BV(BLUE);
+  else PORTB |= _BV(BLUE);
+ 278:	c2 9a       	sbi	0x18, 2	; 24
+ 27a:	f0 cf       	rjmp	.-32     	; 0x25c <__vector_3+0x4a>
+
+0000027c <__vector_12>:
+__vector_12():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:25
+  uint16_t end_point;
+ };
+ volatile pwm_struct PWM_BLUE{0, 0, 0};
+ volatile pwm_struct PWM_GREEN{0, 0, 0};
+ volatile pwm_struct PWM_RED{0, 0, 0};
+ISR(WDT_vect){
+ 27c:	1f 92       	push	r1
+ 27e:	0f 92       	push	r0
+ 280:	0f b6       	in	r0, 0x3f	; 63
+ 282:	0f 92       	push	r0
+ 284:	11 24       	eor	r1, r1
+ 286:	2f 93       	push	r18
+ 288:	3f 93       	push	r19
+ 28a:	4f 93       	push	r20
+ 28c:	5f 93       	push	r21
+ 28e:	6f 93       	push	r22
+ 290:	7f 93       	push	r23
+ 292:	8f 93       	push	r24
+ 294:	9f 93       	push	r25
+ 296:	af 93       	push	r26
+ 298:	bf 93       	push	r27
+ 29a:	ef 93       	push	r30
+ 29c:	ff 93       	push	r31
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:28
+  //Vector de interrupcion del watchdog
+  unit!=unit;
+  WDTCR |= 1<<WDIE; //Se setea el 6 bit de WDTCR para que la siguiente activacion del watchdog no sea un reset
+ 29e:	81 b5       	in	r24, 0x21	; 33
+ 2a0:	80 64       	ori	r24, 0x40	; 64
+ 2a2:	81 bd       	out	0x21, r24	; 33
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:29
+  digitalWrite(RED, HIGH);
+ 2a4:	81 e0       	ldi	r24, 0x01	; 1
+ 2a6:	e6 de       	rcall	.-564    	; 0x74 <digitalWrite.constprop.3>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:31
+  
+}
+ 2a8:	ff 91       	pop	r31
+ 2aa:	ef 91       	pop	r30
+ 2ac:	bf 91       	pop	r27
+ 2ae:	af 91       	pop	r26
+ 2b0:	9f 91       	pop	r25
+ 2b2:	8f 91       	pop	r24
+ 2b4:	7f 91       	pop	r23
+ 2b6:	6f 91       	pop	r22
+ 2b8:	5f 91       	pop	r21
+ 2ba:	4f 91       	pop	r20
+ 2bc:	3f 91       	pop	r19
+ 2be:	2f 91       	pop	r18
+ 2c0:	0f 90       	pop	r0
+ 2c2:	0f be       	out	0x3f, r0	; 63
+ 2c4:	0f 90       	pop	r0
+ 2c6:	1f 90       	pop	r1
+ 2c8:	18 95       	reti
+
+000002ca <main>:
+main():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/main.cpp:6
+#include <Arduino.h>
+
+int main(void)
+{
+  #ifdef TUNED_OSCCAL_VALUE
+  OSCCAL = TUNED_OSCCAL_VALUE; //set the oscillator calibration value based on the pins_arduino.h file. If this is not set, it will be optimised away
+ 2ca:	81 b7       	in	r24, 0x31	; 49
+ 2cc:	81 bf       	out	0x31, r24	; 49
+init():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:699
+    } else {
+      OSCCAL += 5;
+    }
+  }
+  #endif
+  sei();
+ 2ce:	78 94       	sei
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:831
+  #endif
+  #endif
+
+  // Use the Millis Timer for fast PWM (unless it doesn't have an output).
+  #if (TIMER_TO_USE_FOR_MILLIS == 0) && defined(WGM01)
+  sbi(TCCR0A, WGM01);
+ 2d0:	8a b5       	in	r24, 0x2a	; 42
+ 2d2:	82 60       	ori	r24, 0x02	; 2
+ 2d4:	8a bd       	out	0x2a, r24	; 42
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:832
+  sbi(TCCR0A, WGM00);
+ 2d6:	8a b5       	in	r24, 0x2a	; 42
+ 2d8:	81 60       	ori	r24, 0x01	; 1
+ 2da:	8a bd       	out	0x2a, r24	; 42
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:855
+  #endif
+
+  // Millis timer is always processor clock divided by MillisTimer_Prescale_Value (64)
+  #if (TIMER_TO_USE_FOR_MILLIS == 0)
+   #ifdef TCCR0B
+    TCCR0B = (TCCR0B & ~((1<<CS02)|(1<<CS01)|(1<<CS00))) | (MillisTimer_Prescale_Index << CS00);
+ 2dc:	83 b7       	in	r24, 0x33	; 51
+ 2de:	88 7f       	andi	r24, 0xF8	; 248
+ 2e0:	82 60       	ori	r24, 0x02	; 2
+ 2e2:	83 bf       	out	0x33, r24	; 51
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:867
+  TCCR1B = (TCCR1B & ~((1<<CS13)|(1<<CS12)|(1<<CS11)|(1<<CS10))) | (MillisTimer_Prescale_Index << CS10);
+  #elif (TIMER_TO_USE_FOR_MILLIS == 1)
+  TCCR1B = (TCCR1B & ~((1<<CS12)|(1<<CS11)|(1<<CS10))) | (MillisTimer_Prescale_Index << CS10);
+  #endif
+  // this needs to be called before setup() or some functions won't work there
+  sei();
+ 2e4:	78 94       	sei
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:872
+
+  #ifndef DISABLEMILLIS
+  // Enable the overlow interrupt (this is the basic system tic-toc for millis)
+  #if defined(TIMSK) && defined(TOIE0) && (TIMER_TO_USE_FOR_MILLIS == 0)
+  sbi(TIMSK, TOIE0);
+ 2e6:	89 b7       	in	r24, 0x39	; 57
+ 2e8:	82 60       	ori	r24, 0x02	; 2
+ 2ea:	89 bf       	out	0x39, r24	; 57
+initToneTimerInternal():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:507
+  TCCR0B |= (ToneTimer_Prescale_Index << CS00);
+  #elif defined(__AVR_ATtiny43__)
+  TCCR1A = 3; //WGM 10=1, WGM11=1
+  TCCR1B = 3; //prescaler of 64
+  #elif (TIMER_TO_USE_FOR_TONE == 1) && defined(TCCR1)
+  TCCR1 &= ~((1<<CS13) | (1<<CS12) | (1<<CS11) | (1<<CS10)); //stop the clock to configure
+ 2ec:	80 b7       	in	r24, 0x30	; 48
+ 2ee:	80 7f       	andi	r24, 0xF0	; 240
+ 2f0:	80 bf       	out	0x30, r24	; 48
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:509
+  // Use the Tone Timer for fast PWM as phase correct not supported by this timer
+  sbi(TCCR1, CTC1);
+ 2f2:	80 b7       	in	r24, 0x30	; 48
+ 2f4:	80 68       	ori	r24, 0x80	; 128
+ 2f6:	80 bf       	out	0x30, r24	; 48
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:511
+  //#if !defined(__AVR_ATtiny85__)
+  sbi(TCCR1, PWM1A); //for the tiny 85, Timer0 is used instead.
+ 2f8:	80 b7       	in	r24, 0x30	; 48
+ 2fa:	80 64       	ori	r24, 0x40	; 64
+ 2fc:	80 bf       	out	0x30, r24	; 48
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:513
+  //#endif
+  sbi(GTCCR, PWM1B);
+ 2fe:	8c b5       	in	r24, 0x2c	; 44
+ 300:	80 64       	ori	r24, 0x40	; 64
+ 302:	8c bd       	out	0x2c, r24	; 44
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:514
+  OCR1C = 0xFF; //Use 255 as the top to match with the others as this module doesn't have a 8bit PWM mode.
+ 304:	8f ef       	ldi	r24, 0xFF	; 255
+ 306:	8d bd       	out	0x2d, r24	; 45
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:515
+  TCCR1 |= (ToneTimer_Prescale_Index << CS10);
+ 308:	80 b7       	in	r24, 0x30	; 48
+ 30a:	84 60       	ori	r24, 0x04	; 4
+ 30c:	80 bf       	out	0x30, r24	; 48
+init():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:893
+
+  // Initialize the ADC
+  #if defined( INITIALIZE_ANALOG_TO_DIGITAL_CONVERTER ) && INITIALIZE_ANALOG_TO_DIGITAL_CONVERTER
+  #if defined(ADCSRA)
+    // set a2d prescale factor
+  ADCSRA = (ADCSRA & ~((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0))) | (ADC_ARDUINO_PRESCALER << ADPS0) | (1<<ADEN);
+ 30e:	86 b1       	in	r24, 0x06	; 6
+ 310:	88 77       	andi	r24, 0x78	; 120
+ 312:	83 68       	ori	r24, 0x83	; 131
+ 314:	86 b9       	out	0x06, r24	; 6
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:895
+    // enable a2d conversions
+    sbi(ADCSRA, ADEN);
+ 316:	37 9a       	sbi	0x06, 7	; 6
+setup():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:53
+    sleep_enable();
+    sleep_cpu();
+    //Shouldnt get out of this unless a reset.
+  }*/
+  
+  PLLCSR |= _BV(PLLE);
+ 318:	87 b5       	in	r24, 0x27	; 39
+ 31a:	82 60       	ori	r24, 0x02	; 2
+ 31c:	87 bd       	out	0x27, r24	; 39
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:55
+  
+  while((PLLCSR & (1<<PLOCK)) == 0);
+ 31e:	07 b4       	in	r0, 0x27	; 39
+ 320:	00 fe       	sbrs	r0, 0
+ 322:	fd cf       	rjmp	.-6      	; 0x31e <main+0x54>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:57
+  
+  PLLCSR |= _BV(PCKE);  //Sets PLL Clock to Timer1 pag 94
+ 324:	87 b5       	in	r24, 0x27	; 39
+ 326:	84 60       	ori	r24, 0x04	; 4
+ 328:	87 bd       	out	0x27, r24	; 39
+setup_watchdog():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:104
+  if (ii > 7) bb|= (1<<5);
+  bb|= (1<<WDCE);
+  ww=bb;
+
+  
+  MCUSR &= ~(1<<WDRF);  //WDFR contiene el flag de reset por watchdog. Se pone a 0 con operacion AND
+ 32a:	84 b7       	in	r24, 0x34	; 52
+ 32c:	87 7f       	andi	r24, 0xF7	; 247
+ 32e:	84 bf       	out	0x34, r24	; 52
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:106
+  // start timed sequence
+  WDTCR |= (1<<WDCE) | (1<<WDE); //Bits WDCE y WDE controlan el estado del watchdog. WDCE es Watchdog Change Enable. 
+ 330:	81 b5       	in	r24, 0x21	; 33
+ 332:	88 61       	ori	r24, 0x18	; 24
+ 334:	81 bd       	out	0x21, r24	; 33
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:108
+  // set new watchdog timeout value
+  WDTCR = bb; //Setea el tiempo de activacion del watchdog
+ 336:	81 e3       	ldi	r24, 0x31	; 49
+ 338:	81 bd       	out	0x21, r24	; 33
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:109
+  WDTCR |= _BV(WDIE); //Activa el modo de Watchdog Timeout Interrupt Enable
+ 33a:	81 b5       	in	r24, 0x21	; 33
+ 33c:	80 64       	ori	r24, 0x40	; 64
+ 33e:	81 bd       	out	0x21, r24	; 33
+initTimerCounter1():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:114
+
+  //INFO en pag 45 de datasheet
+}
+void initTimerCounter1(void){
+    TCCR1 = 0;                  //stop the timer
+ 340:	10 be       	out	0x30, r1	; 48
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:115
+    TCNT1 = 0;                  //zero the timer
+ 342:	1f bc       	out	0x2f, r1	; 47
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:116
+    GTCCR = _BV(PSR1);          //reset the prescaler
+ 344:	82 e0       	ldi	r24, 0x02	; 2
+ 346:	8c bd       	out	0x2c, r24	; 44
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:117
+    OCR1A = 1;                //set the compare value
+ 348:	81 e0       	ldi	r24, 0x01	; 1
+ 34a:	8e bd       	out	0x2e, r24	; 46
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:118
+    OCR1B = 0;
+ 34c:	1b bc       	out	0x2b, r1	; 43
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:119
+    OCR1C = 0;
+ 34e:	1d bc       	out	0x2d, r1	; 45
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:121
+    //TIMSK = _BV(OCIE1A);// | _BV(OCIE1B);        //interrupt on Compare Match A
+    TIMSK =  _BV(OCIE1B);
+ 350:	80 e2       	ldi	r24, 0x20	; 32
+ 352:	89 bf       	out	0x39, r24	; 57
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:124
+    //start timer, ctc mode, prescaler clk/16384    
+    //TCCR1 = _BV(CTC1) | _BV(CS13) | _BV(CS12) | _BV(CS11) | _BV(CS10);
+    TCCR1 = _BV(CTC1) | _BV(CS13);
+ 354:	88 e8       	ldi	r24, 0x88	; 136
+ 356:	80 bf       	out	0x30, r24	; 48
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:125
+    sei();
+ 358:	78 94       	sei
+setup():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:63
+  //PLLCSR &=~_BV(LSM);   //Resets  LSM (Low Speed Mode) pag 94
+  //CLKPR = _BV(CLKPCE);    //Prepares for sys clk prescaler
+  //CLKPR = 0;              //Sets after preparing sys clk prescaler to 0
+  setup_watchdog(9);  //8s
+  initTimerCounter1();
+  pinMode(GREEN, OUTPUT);
+ 35a:	80 e0       	ldi	r24, 0x00	; 0
+ 35c:	c0 de       	rcall	.-640    	; 0xde <pinMode.constprop.0>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:64
+  pinMode(RED, OUTPUT);
+ 35e:	81 e0       	ldi	r24, 0x01	; 1
+ 360:	be de       	rcall	.-644    	; 0xde <pinMode.constprop.0>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:65
+  pinMode(BLUE, OUTPUT);
+ 362:	82 e0       	ldi	r24, 0x02	; 2
+ 364:	bc de       	rcall	.-648    	; 0xde <pinMode.constprop.0>
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:66
+  if(PLLCSR & (1<<PLOCK))digitalWrite(BLUE, HIGH);
+ 366:	07 b4       	in	r0, 0x27	; 39
+ 368:	00 fe       	sbrs	r0, 0
+ 36a:	02 c0       	rjmp	.+4      	; 0x370 <main+0xa6>
+ 36c:	82 e0       	ldi	r24, 0x02	; 2
+ 36e:	82 de       	rcall	.-764    	; 0x74 <digitalWrite.constprop.3>
+loop():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:73
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+    // fade in from min to max in increments of 5 points:
+    PWM_BLUE.active=1;
+ 370:	11 e0       	ldi	r17, 0x01	; 1
+ 372:	10 93 6c 00 	sts	0x006C, r17	; 0x80006c <PWM_BLUE>
+delay():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:282
+void yield(void) __attribute__ ((weak, alias("__empty")));
+
+void delay(unsigned long ms)
+{
+  #if (F_CPU>=1000000L)
+  uint16_t start = (uint16_t)micros();
+ 376:	d2 de       	rcall	.-604    	; 0x11c <micros>
+ 378:	eb 01       	movw	r28, r22
+ 37a:	80 e1       	ldi	r24, 0x10	; 16
+ 37c:	c8 2e       	mov	r12, r24
+ 37e:	87 e2       	ldi	r24, 0x27	; 39
+ 380:	d8 2e       	mov	r13, r24
+ 382:	e1 2c       	mov	r14, r1
+ 384:	f1 2c       	mov	r15, r1
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:286
+
+  while (ms > 0) {
+    yield();
+    while (((uint16_t)micros() - start) >= 1000 && ms) {
+ 386:	ca de       	rcall	.-620    	; 0x11c <micros>
+ 388:	6c 1b       	sub	r22, r28
+ 38a:	7d 0b       	sbc	r23, r29
+ 38c:	68 3e       	cpi	r22, 0xE8	; 232
+ 38e:	73 40       	sbci	r23, 0x03	; 3
+ 390:	78 f0       	brcs	.+30     	; 0x3b0 <main+0xe6>
+ 392:	c1 14       	cp	r12, r1
+ 394:	d1 04       	cpc	r13, r1
+ 396:	e1 04       	cpc	r14, r1
+ 398:	f1 04       	cpc	r15, r1
+ 39a:	11 f4       	brne	.+4      	; 0x3a0 <main+0xd6>
+loop():
+/home/lukilukeskywalker/Proyectos/Kicad/wheatley_portal_pin/wheatley_code/wheatley_code.ino:76
+  //while(1)yield();
+  delay(10000);
+  PINB |= _BV(BLUE);
+ 39c:	b2 9a       	sbi	0x16, 2	; 22
+ 39e:	e9 cf       	rjmp	.-46     	; 0x372 <main+0xa8>
+delay():
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:287
+      ms--;
+ 3a0:	81 e0       	ldi	r24, 0x01	; 1
+ 3a2:	c8 1a       	sub	r12, r24
+ 3a4:	d1 08       	sbc	r13, r1
+ 3a6:	e1 08       	sbc	r14, r1
+ 3a8:	f1 08       	sbc	r15, r1
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:288
+      start += 1000;
+ 3aa:	c8 51       	subi	r28, 0x18	; 24
+ 3ac:	dc 4f       	sbci	r29, 0xFC	; 252
+ 3ae:	eb cf       	rjmp	.-42     	; 0x386 <main+0xbc>
+/home/lukilukeskywalker/.arduino15/packages/ATTinyCore/hardware/avr/1.3.3/cores/tiny/wiring.c:284
+void delay(unsigned long ms)
+{
+  #if (F_CPU>=1000000L)
+  uint16_t start = (uint16_t)micros();
+
+  while (ms > 0) {
+ 3b0:	c1 14       	cp	r12, r1
+ 3b2:	d1 04       	cpc	r13, r1
+ 3b4:	e1 04       	cpc	r14, r1
+ 3b6:	f1 04       	cpc	r15, r1
+ 3b8:	31 f7       	brne	.-52     	; 0x386 <main+0xbc>
+ 3ba:	f0 cf       	rjmp	.-32     	; 0x39c <main+0xd2>
+
+000003bc <_exit>:
+exit():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+ 3bc:	f8 94       	cli
+
+000003be <__stop_program>:
+__stop_program():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+ 3be:	ff cf       	rjmp	.-2      	; 0x3be <__stop_program>
