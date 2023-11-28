@@ -12,16 +12,18 @@
 #define GREEN 0//PB0
 #define BLUE 2//PB2
 #define MAX_EVENTS 3
+
 int setTIM1CompVal_A(byte value);
 int setTIM1CompVal_B(byte value);
+void setcolor(RGB *color);
 typedef enum {STARTUP=0, CURIOUS=1, ANOYED=2}state_t;
-static state_t* state_p;  //Status de weatley. Puntero consta;nte, dato variable
+state_t* state_p;  //Status de weatley. Puntero consta;nte, dato variable
 org_t* organizador=NULL;
 ISR(WDT_vect){
   //Vector de interrupcion del watchdog
   WDTCR |= 1<<WDIE; //Se setea el 6 bit de WDTCR para que la siguiente activacion del watchdog no sea un reset
   //PINB |= _BV(RED);
-  switch(*state_p){
+  /*switch(*state_p){
     case STARTUP:
       break;
     case CURIOUS:
@@ -33,11 +35,11 @@ ISR(WDT_vect){
     default: 
       *state_p = STARTUP;
       break;
-  }
+  }*/
 }
 ISR(TIMER1_COMPA_vect){
-  PORTB &= (ret_actual_ON_event_ID()>>8)&0xFF;    //Shut down
   PORTB  |= 0xFF&ret_actual_ON_event_ID();        //Set pin
+  PORTB &= (ret_actual_ON_event_ID()>>8)&0xFF;    //Shut down
   setTIM1CompVal_A(ret_next_ON_event_time()); //THIS FUCKER 
 }
 ISR(TIMER1_COMPB_vect){
@@ -60,12 +62,13 @@ void setup() {
   init_org(&organizador, MAX_EVENTS);
   del_all_events();
   DDRB |= _BV(BLUE) | _BV(GREEN) | _BV(RED) | _BV(PB3);  //SET OUTPUT PINS
+  
   //setup_watchdog(9);
-    //*state_p=ANOYED;
+  //*state_p=STARTUP;
   switch(*state_p) { 
     
     case STARTUP:
-      *state_p = ANOYED;
+      *state_p = CURIOUS;
       wakeup_anim();
       break;
     case CURIOUS:
@@ -76,21 +79,21 @@ void setup() {
       anoyed_anim();
       break;
     default:
-      *state_p = ANOYED;
+      *state_p = STARTUP;
       break;
   }
+  
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   /*set_sleep_mode(SLEEP_MODE_PWR_DOWN);
   
    _delay_ms(1000);
    PINB |= _BV(GREEN);*/
    
-   surprised();
-   _delay_ms(50);
+   //surprised();
+   //_delay_ms(50);
    //_delay_ms(2000);
     //set_sleep_mode(SLEEP_MODE_PWR_DOWN);
     //sleep_mode();
@@ -167,15 +170,16 @@ void setup_watchdog(int ii){
 }
 void wakeup_anim(void){
   //PORTB &= 0; //Make sure all leds are off
-  setupTIM1(0, 1);
-  for(int i=1; i<150; i++){
+  //setupTIM1(0, 1);
+  RGB color;
+  for(unsigned char i=1; i<150; i++){
     _delay_ms(50);
-    //setTIM1CompVal_B(i);
-    set_full_event(_BV(BLUE), 0, i);
+    color = {0, 0, i};
+    setcolor(&color);
   }
   
   stopTIM1();
-  del_full_event(_BV(BLUE));
+  del_all_events();//del_full_event(_BV(BLUE));
 
   PORTB |= _BV(BLUE);
   for(int i=0; i<3; i++){
@@ -196,14 +200,16 @@ void curious_anim(void){
   }
 }
 void anoyed_anim(void){
-  PORTB &=0;
-  setupTIM1(0, 1);
-  for(int i=1; i<150; i++){
+  //PORTB &=0;
+  //setupTIM1(0, 1);
+  RGB color;
+  for(unsigned char i=1; i<150; i++){
     _delay_ms(150);
-    set_full_event(_BV(RED), 0, i);
+    color = {i, 0, 0};
+    setcolor(&color);
   }
   stopTIM1();
-  del_full_event(_BV(RED));
+  del_all_events();//del_full_event(_BV(RED));
 }
 double drand ( double low, double high ){
   return ( (double)rand() * ( high - low ) ) / (double)RAND_MAX + low;
@@ -248,45 +254,9 @@ void setcolor(RGB *color){
       t1 = ((t1-t0)<4)? t0+4 : t1;
       set_ON_event(OFF_mask<<8|ON_mask, t0);
     }
-    else{
-
-    }
-    /*else{
-      del_full_event();
-    }*/
-    
   }
   PINB |= _BV(PB3);
   setupTIM1(0); //Internally the global interrupt will be enabled
-  /*unsigned char mascara = 0;
-  static unsigned char mascara_vieja;
-  
-  if(color.R != 0){
-    mascara |= _BV(RED);
-    set_OFF_event(_BV(RED), color.R);
-  }else if(mascara_vieja&_BV(RED)){
-    del_full_event(_BV(RED));
-  }
-  if(color.G != 0){
-    mascara |= _BV(GREEN);
-    set_OFF_event(_BV(GREEN), color.G);
-  }else if(mascara_vieja&_BV(GREEN)){
-    del_full_event(_BV(GREEN));
-  }
-  if(color.B != 0){
-    mascara |= _BV(BLUE);
-    set_OFF_event(_BV(BLUE), color.B);
-  }else if(mascara_vieja&_BV(BLUE)){
-    del_full_event(_BV(BLUE));
-  }
-  if(mascara_vieja != mascara){
-    del_full_event(mascara_vieja);
-    //ATENCION! Hay que eliminar todavia los colores del buffer OFF
-    setupTIM1(0, 40);
-    set_ON_event(mascara, 0);
-    mascara_vieja = mascara;
-    //PINB |= _BV(RED);
-  }*/
 }
 void surprised(void){
   static int h1, h2;
@@ -296,39 +266,10 @@ void surprised(void){
   }else{
     h1++;
   }
-  //if(h1<=255)h1++;
-  //else h1=0;
   struct HSV color = {h1, 1, 0.1};
   setcolor(&HSVToRGB(color));
-  //struct RGB color ={128, 128, 128};
-  //setcolor(&color);
-  //setcolor({255, 255, 0});
-  /*double golden_ratio_conjugate = 0.618033988749895;
-  static double h1;
-  static double h2;
-  struct HSV color;
-  double cociente = (h2+golden_ratio_conjugate)/1;
-  h1=h2-cociente;//drand(0, 1);
-  setupTIM1(0, 40);
-  if(h1<h2){
-    for(h1; h1<h2; h1=h1+0.05){
-      _delay_ms(50);
-      color = {h1, 0.7, 0.5};
-      setcolor(HSVToRGB(color));
-    }
-  }
-  else if(h2<h1){
-    for(h1; h1>h2; h1=h1-0.05){
-      _delay_ms(50);
-      color = {h1, 0.7, 0.5};
-      setcolor(HSVToRGB(color));
-    }
-  }*/
-  //struct HSV color={h, 0.5, 0.95};
-  //RGB colorrgb1 = HSVToRGB(color);
-  
-  //h = h - cociente;
-  //color={h, 0.5, 0.95};
-  //RGB colorrgb2 = HSVToRGB(color);
-  //h2 = h1;
+}
+void setPin(){
+  PORTB &= (ret_actual_ON_event_ID()>>8)&0xFF;    //Shut down
+  PORTB  |= 0xFF&ret_actual_ON_event_ID();        //Set pin
 }

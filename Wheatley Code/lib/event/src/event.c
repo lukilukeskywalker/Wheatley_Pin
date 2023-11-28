@@ -134,6 +134,7 @@ int del_all_events(){
     org->n_OFF_elements = 0;
     (org->ON_procs)->ID = 0;    //Si no se pone a 0, ret_actual_ON_event_ID() devuelve un ID
     (org->OFF_procs)->ID = 0;   //Que ya no existe
+    //Sin embargo se produce un error, y es que si el ISR espera un evento especifico y el puntero no le devuelve ese, el led se queda encendido mas tiempo
     return 0;
 }
 int ret_next_ON_event_time(){

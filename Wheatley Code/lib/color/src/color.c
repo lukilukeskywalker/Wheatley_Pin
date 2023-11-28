@@ -1,4 +1,3 @@
-#include <math.h>
 #include "color.h"
 struct RGB HSVToRGB(struct HSV hsv) {
 	double r = 0, g = 0, b = 0;
